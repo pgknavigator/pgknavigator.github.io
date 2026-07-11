@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PGK Navigator - Coming Soon</title>
-  <!-- Menyisipkan font modern Inter agar nyaman dibaca -->
+  <!-- Menyisipkan font modern Inter dan font piksel digital DotGothic16 -->
   <link rel="stylesheet" href="https://googleapis.com">
   
   <style>
@@ -12,8 +12,8 @@
       font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 20px;
-      background-color: #ffffff;
-      color: #333333;
+      background-color: #0b3c5d; /* Mengubah latar belakang menjadi Biru Tua Mediterania */
+      color: #ffffff; /* Mengubah teks utama menjadi putih agar kontras */
     }
     /* Mengatur tata letak logo dan teks agar sejajar di kiri */
     .header-container {
@@ -35,18 +35,18 @@
     .brand-pgk {
       font-size: 24px;
       font-weight: 700;
-      color: #0b3c5d;
+      color: #ffffff; /* Mengubah teks PGK menjadi putih terang di atas latar gelap */
     }
     .brand-navigator {
       font-size: 14px;
       font-weight: 600;
-      color: #d9a74a;
+      color: #d9a74a; /* Warna emas logo tetap dipertahankan */
       text-transform: uppercase;
       letter-spacing: 2px;
     }
     hr {
       border: 0;
-      border-top: 1px solid #e0e0e0;
+      border-top: 1px solid rgba(255, 255, 255, 0.2); /* Garis pembatas tipis transparan yang elegan */
       margin-top: 0;
       margin-bottom: 40px;
     }
@@ -57,24 +57,23 @@
       align-items: center;
       text-align: center;
       max-width: 600px;
-      margin: 0 auto; /* Membuat konten berada di tengah-tengah layar laptop */
+      margin: 0 auto;
     }
-    /* Mengatur gaya teks Coming Soon kekinian */
+    /* Mengatur gaya teks Coming Soon menggunakan font piksel digital */
     .coming-soon-title {
-      font-size: 32px;
-      font-weight: 700;
-      color: #0b3c5d; /* Senada dengan warna biru logo */
+      font-family: 'DotGothic16', sans-serif; /* Mengaktifkan font piksel kotak digital */
+      font-size: 36px;
+      color: #d9a74a; /* Menggunakan warna emas menyala sesuai kesepakatan */
       margin-bottom: 25px;
-      text-transform: uppercase;
       letter-spacing: 1px;
     }
-    /* Mengatur wadah video agar responsif dan pas di HP maupun desktop */
+    /* Mengatur wadah video agar responsif */
     .video-container {
       width: 100%;
-      max-width: 450px; /* Ukuran video yang pas dan proporsional */
-      border-radius: 12px; /* Membuat sudut video sedikit melengkung halus */
+      max-width: 450px;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Efek bayangan tipis agar premium */
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Efek bayangan lebih tebal agar video terlihat pop-out di latar gelap */
       margin-bottom: 30px;
     }
     video {
@@ -86,8 +85,8 @@
     .slogan-text {
       font-size: 18px;
       font-weight: 600;
-      color: #d9a74a; /* Senada dengan warna emas logo */
-      letter-spacing: 3px; /* Jarak antar huruf agar terlihat premium */
+      color: #ffffff; /* Slogan diubah menjadi putih bersih */
+      letter-spacing: 3px;
       text-transform: uppercase;
     }
   </style>
@@ -108,12 +107,11 @@
   <!-- Bagian Isi Konten Baru (Rata Tengah) -->
   <div class="main-content">
     
-    <!-- 1. Kalimat Coming Soon -->
-    <div class="coming-soon-title">Coming Soon</div>
+    <!-- 1. Kalimat Coming Soon Bergaya Piksel Digital -->
+    <div class="coming-soon-title">coming soon...!</div>
     
     <!-- 2. Pemutar Video Animasi MP4 Otomatis -->
     <div class="video-container">
-      <!-- playsinline, autoplay, muted, dan loop membuat video berputar otomatis terus-menerus tanpa suara seperti animasi GIF -->
       <video autoplay muted loop playsinline>
         <source src="animasi.mp4" type="video/mp4">
         Browser Anda tidak mendukung pemutar video.
