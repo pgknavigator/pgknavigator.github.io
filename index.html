@@ -4,18 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PGK Navigator - Coming Soon</title>
-  <!-- Menyisipkan font modern Inter dan font tulisan sambung mewah Birthstone -->
-  <link rel="stylesheet" href="https://googleapis.com">
+  <!-- Memanggil font Birthstone langsung dari server Google secara maksimal -->
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Birthstone&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   
   <style>
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 20px;
-      background-color: #0b3c5d; /* Latar belakang Biru Tua Mediterania */
+      background-color: #0b3c5d; 
       color: #ffffff;
     }
-    /* Mengatur tata letak logo dan teks agar sejajar di kiri */
     .header-container {
       display: flex;
       align-items: center;
@@ -50,7 +51,6 @@
       margin-top: 0;
       margin-bottom: 40px;
     }
-    /* Mengatur semua konten utama agar rata tengah */
     .main-content {
       display: flex;
       flex-direction: column;
@@ -59,23 +59,25 @@
       max-width: 600px;
       margin: 0 auto;
     }
-    /* Mengatur teks Coming Soon menggunakan Birthstone Ukuran Besar */
+    /* Memperbaiki gaya tulisan Birthstone agar tidak menutupi animasi */
     .coming-soon-title {
-      font-family: 'Birthstone', cursive; /* Mengaktifkan font Birthstone asli */
-      font-size: 82px; /* Ukuran dibuat ekstra besar agar lekukan font Birthstone terlihat mewah */
-      color: #d9a74a; /* Warna emas menyala */
+      font-family: 'Birthstone', cursive !important; /* !important memaksa browser patuh */
+      font-size: 90px; /* Ukuran besar yang anggun */
+      color: #d9a74a; 
       margin-top: 0;
-      margin-bottom: 5px;
-      line-height: 1;
-      text-transform: lowercase; /* Menjaga format huruf kecil yang estetik */
+      margin-bottom: -10px; /* Mengatur ruang remas yang pas */
+      padding-bottom: 0;
+      line-height: 0.9;
+      text-transform: lowercase;
     }
-    /* Mengatur wadah video agar responsif */
+    /* Memberikan jarak atas ekstra pada wadah video agar tidak tertutup teks */
     .video-container {
       width: 100%;
       max-width: 450px;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      margin-top: 25px; /* Jarak aman pelindung dari tabrakan teks */
       margin-bottom: 35px;
     }
     video {
@@ -83,7 +85,6 @@
       height: auto;
       display: block;
     }
-    /* Mengatur gaya tulisan slogan nilai proyek */
     .slogan-text {
       font-size: 18px;
       font-weight: 600;
@@ -95,7 +96,6 @@
 </head>
 <body>
 
-  <!-- Bagian Atas / Header Berlogo (Tetap Di Kiri) -->
   <div class="header-container">
     <img src="logo.jpeg" alt="Logo PGK Navigator" class="logo-brand">
     <div class="text-brand">
@@ -106,13 +106,9 @@
   
   <hr>
 
-  <!-- Bagian Isi Konten Baru (Rata Tengah) -->
   <div class="main-content">
-    
-    <!-- 1. Kalimat Coming Soon Bergaya Birthstone -->
     <div class="coming-soon-title">coming soon...!</div>
     
-    <!-- 2. Pemutar Video Animasi MP4 Otomatis -->
     <div class="video-container">
       <video autoplay muted loop playsinline>
         <source src="animasi.mp4" type="video/mp4">
@@ -120,9 +116,7 @@
       </video>
     </div>
     
-    <!-- 3. Slogan Nilai Proyek -->
     <div class="slogan-text">Explore • Connect • Grow</div>
-    
   </div>
 
 </body>
