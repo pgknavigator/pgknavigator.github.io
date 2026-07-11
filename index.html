@@ -135,6 +135,28 @@
     <div class="slogan-text">Explore • Connect • Grow</div>
     
   </div>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyD_iGzj3LkLe0cmgIuQeeHl7AQFzwqov-k",
+    authDomain: "pgk-navigator.firebaseapp.com",
+    projectId: "pgk-navigator",
+    storageBucket: "pgk-navigator.firebasestorage.app",
+    messagingSenderId: "714265803669",
+    appId: "1:714265803669:web:0c25b89c051c81dca8d49c",
+    measurementId: "G-NR757FGV7T"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 </body>
 </html>
