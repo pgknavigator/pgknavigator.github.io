@@ -4,12 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PGK Navigator - Coming Soon</title>
-  <!-- Memanggil font Birthstone langsung dari server Google secara maksimal -->
-  <link rel="preconnect" href="https://googleapis.com">
-  <link rel="preconnect" href="https://gstatic.com" crossorigin>
-  <link href="https://googleapis.com/css2?family=Birthstone&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  
+  <!-- Memanggil font Birthstone dan Inter langsung dengan format impor alternatif -->
   <style>
+    @import url('https://googleapis.com');
+
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
@@ -59,25 +57,25 @@
       max-width: 600px;
       margin: 0 auto;
     }
-    /* Memperbaiki gaya tulisan Birthstone agar tidak menutupi animasi */
+    /* Mengatur teks Birthstone dengan ruang jarak bawah yang lapang */
     .coming-soon-title {
-      font-family: 'Birthstone', cursive !important; /* !important memaksa browser patuh */
-      font-size: 90px; /* Ukuran besar yang anggun */
+      font-family: 'Birthstone', cursive !important;
+      font-size: 80px; 
       color: #d9a74a; 
-      margin-top: 0;
-      margin-bottom: -10px; /* Mengatur ruang remas yang pas */
+      margin-top: 10px;
+      margin-bottom: 0; /* Menghapus margin bawaan */
       padding-bottom: 0;
-      line-height: 0.9;
+      line-height: 1;
       text-transform: lowercase;
     }
-    /* Memberikan jarak atas ekstra pada wadah video agar tidak tertutup teks */
+    /* MENAMBAHKAN JARAK AMAN EKSTRA AGAR TIDAK MENEMPEL SAMA SEKALI */
     .video-container {
       width: 100%;
       max-width: 450px;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-      margin-top: 25px; /* Jarak aman pelindung dari tabrakan teks */
+      margin-top: 60px; /* Menambah jarak dari 25px ke 60px agar turun jauh ke bawah */
       margin-bottom: 35px;
     }
     video {
